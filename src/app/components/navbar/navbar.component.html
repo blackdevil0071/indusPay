@@ -1,0 +1,25 @@
+<header class="navbar-container">
+  <nav class="navigation">
+    <h1 class="logo">Brainwave.io</h1>
+    <ul class="nav-links">
+      <li><a href="#demos">Demos</a></li>
+      <li><a routerLink="/pages">Pages</a></li>
+
+      <li><a href="#support" data-target="#exampleModalScrollable">Support</a></li>
+
+      <!-- Toggle contact form on click -->
+      <li (click)="toggleContactForm()" data-toggle="modal" data-target="#exampleModalScrollable"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="cta-button">Get started a project</button>
+</header>
+
+<!-- Conditionally render the contact form modal -->
+<div class="modal" *ngIf="isContactFormOpen">
+  <div class="modal-content">
+    <span class="close" (click)="toggleContactForm()">&times;</span>
+    <app-contact-form (close)="toggleContactForm()"></app-contact-form>
+  </div>
+</div>
+
+

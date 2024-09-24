@@ -1,0 +1,56 @@
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+
+    <div *ngIf="successMessage" class="alert alert-success">
+      {{ successMessage }}
+    </div>
+
+    <div class="modal-content">
+      <div class="modal-body">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <label for="createdAt" class="description">Created At:</label>
+            <input id="createdAt" formControlName="createdAt" type="date" class="form-control" [ngClass]="{'is-invalid': contactForm.get('createdAt')!.invalid && (contactForm.get('createdAt')!.touched || contactForm.get('createdAt')!.dirty)}">
+          </div>
+          <div class="form-row">
+            <label for="first_name" class="description">First Name:</label>
+            <input id="first_name" formControlName="first_name" type="text" class="form-control" [ngClass]="{'is-invalid': contactForm.get('first_name')!.invalid && (contactForm.get('first_name')!.touched || contactForm.get('first_name')!.dirty)}">
+            <label for="last_name" class="description">Last Name:</label>
+            <input id="last_name" formControlName="last_name" type="text" class="form-control" [ngClass]="{'is-invalid': contactForm.get('last_name')!.invalid && (contactForm.get('last_name')!.touched || contactForm.get('last_name')!.dirty)}">
+          </div>
+          <div class="form-row">
+            <label for="emailId" class="description">Email:</label>
+            <input id="emailId" formControlName="emailId" type="email" class="form-control" [ngClass]="{'is-invalid': contactForm.get('emailId')!.invalid && (contactForm.get('emailId')!.touched || contactForm.get('emailId')!.dirty)}">
+            <label for="age" class="description">Age:</label>
+            <input id="age" formControlName="age" type="number" class="form-control" [ngClass]="{'is-invalid': contactForm.get('age')!.invalid && (contactForm.get('age')!.touched || contactForm.get('age')!.dirty)}">
+          </div>
+          <div class="form-row">
+            <label for="gender" class="description">Gender:</label>
+            <select id="gender" formControlName="gender" class="form-control" [ngClass]="{'is-invalid': contactForm.get('gender')!.invalid && (contactForm.get('gender')!.touched || contactForm.get('gender')!.dirty)}">
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <label for="mobilenumber" class="description">Mobile No:</label>
+            <input id="mobilenumber" formControlName="mobilenumber" type="tel" class="form-control" [ngClass]="{'is-invalid': contactForm.get('mobilenumber')!.invalid && (contactForm.get('mobilenumber')!.touched || contactForm.get('mobilenumber')!.dirty)}">
+          </div>
+          <div class="form-row">
+            <label for="pan_no" class="description">PAN No:</label>
+            <input id="pan_no" formControlName="pan_no" type="text" class="form-control" [ngClass]="{'is-invalid': contactForm.get('pan_no')!.invalid && (contactForm.get('pan_no')!.touched || contactForm.get('pan_no')!.dirty)}">
+            <label for="adhaar_no" class="description">Aadhaar No:</label>
+            <input id="adhaar_no" formControlName="adhaar_no" type="text" class="form-control" [ngClass]="{'is-invalid': contactForm.get('adhaar_no')!.invalid && (contactForm.get('adhaar_no')!.touched || contactForm.get('adhaar_no')!.dirty)}">
+          </div>
+          <div class="form-row">
+            <label for="status" class="description">Status:</label>
+            <input type="checkbox" id="status" formControlName="status" class="form-check-input">
+            <label class="form-check-label description" for="status">Active</label>
+          </div>
+          <div class="button-container">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" (click)="onUpdate()" class="btn btn-secondary">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

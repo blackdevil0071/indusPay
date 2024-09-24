@@ -1,0 +1,177 @@
+.footer {display: flex;
+flex-direction: column;
+padding-bottom: 15px;
+}
+
+.cta-section {
+background-color: #161c2d;
+display: flex;
+width: 100%;
+justify-content: center;
+padding: 61px 1px 0;
+}
+
+.cta-content {
+width: 100%;
+max-width: 808px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.cta-text-container {
+width: 73%;
+}
+
+.cta-title {
+font: 700 32px/1 Gilroy, sans-serif;
+color: #fff;
+letter-spacing: -1.2px;
+}
+
+.cta-description {
+font: 400 19px/32px Gilroy, sans-serif;
+color: #fff;
+letter-spacing: -0.2px;
+margin-top: 20px;
+}
+
+.cta-button {
+border-radius: 8px;
+background-color: #473bf0;
+color: #fff;
+text-align: center;
+letter-spacing: -0.6px;
+padding: 8px 33px;
+font: 700 17px/32px Gilroy, sans-serif;
+border: none;
+cursor: pointer;
+}
+
+.footer-image {
+width: 100%;
+max-width: 807px;
+margin-top: 72px;
+}
+
+.footer-content {
+background-color: #161c2d;
+width: 100%;
+display: flex;
+justify-content: center;
+margin-bottom: -15px;
+}
+
+.footer-grid {
+display: flex;
+width: 100%;
+max-width: 798px;
+justify-content: space-between;
+}
+
+.company-info {
+display: flex;
+flex-direction: column;
+}
+
+.company-name {
+font: 700 28px Rubik, sans-serif;
+color: #fff;
+letter-spacing: -0.16px;
+}
+
+.company-description {
+font: 400 15px/26px Gilroy, sans-serif;
+color: #fff;
+letter-spacing: -0.1px;
+margin-top: 48px;
+}
+
+.company-logo {
+width: 103px;
+margin-top: 23px;
+}
+
+.footer-nav {
+display: flex;
+gap: 20px;
+}
+
+.nav-column {
+display: flex;
+flex-direction: column;
+}
+
+.nav-title {
+font: 400 15px/26px Gilroy, sans-serif;
+color: #fff;
+letter-spacing: -0.1px;
+}
+
+.nav-list {
+list-style: none;
+padding: 0;
+margin: 25px 0 0;
+}
+
+.nav-list li {
+margin-bottom: 10px;
+}
+
+.nav-list a {
+font: 400 17px/40px Gilroy, sans-serif;
+color: #fff;
+letter-spacing: -0.2px;
+text-decoration: none;
+}
+
+@media (max-width: 991px) {
+.cta-section {
+  max-width: 100%;
+}
+
+.cta-content {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.cta-text-container {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.cta-description {
+  max-width: 100%;
+}
+
+.cta-button {
+  margin-top: 40px;
+}
+
+.footer-image {
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 100%;
+  margin: 0 -2px 10px 0;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  flex-direction: column;
+}
+
+.company-name {
+  margin-right: 5px;
+}
+
+.company-description {
+  margin-top: 40px;
+}
+
+.footer-nav {
+  flex-wrap: wrap;
+}
+}

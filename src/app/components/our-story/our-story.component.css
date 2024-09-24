@@ -1,0 +1,153 @@
+.about {
+  border-radius: 0;
+  padding: 10% 10% 52px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.story-column, .info-column {
+  width: 50%;
+}
+
+.section-title {
+  color: #F64B4B;
+  font: 700 13px/1.5 Gilroy, sans-serif;
+  letter-spacing: 1.63px;
+  text-transform: uppercase;
+  animation-delay: 0.2s;
+}
+
+.story-description {
+  color: #161C2D;
+  font: 700 36px/48px Gilroy, sans-serif;
+  letter-spacing: -1.2px;
+  margin-top: 40px;
+  opacity: 0; /* Start hidden */
+  transform: translateX(100px); /* Slide in from the right */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition effect */
+}
+
+.story-description.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Reset position */
+}
+
+.story-image {
+  aspect-ratio: 0.79;
+  object-fit: contain;
+  width: 100%;
+  max-width: 445px;
+  border-radius: 10px;
+  margin-top: 120px;
+  animation-delay: 0.2s;
+}
+
+.info-content {
+  margin-top: 206px;
+  animation-delay: 0.8s;
+}
+
+.image-container {
+  display: flex;
+  animation-delay: 0.8s;
+}
+
+.large-image-wrapper {
+  width: 70%;
+}
+
+.small-image-wrapper {
+  width: 30%;
+  margin-left: 20px;
+}
+
+.info-text {
+  color: #161C2D;
+  font: 400 17px/29px Gilroy, sans-serif;
+  letter-spacing: -0.2px;
+  margin-top: 100px;
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Slide in from below */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition effect */
+}
+
+.info-text.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset position */
+}
+
+
+@media (max-width: 991px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .story-column, .info-column {
+    width: 100%;
+  }
+  .story-image, .info-content, .small-image, .decorative-image {
+    margin-top: 40px;
+  }
+}
+
+.story-image {
+  opacity: 0; /* Start as invisible */
+  transform: translateX(-50px); /* Slide in from the left */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+}
+
+.story-image.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Move to original position */
+}
+.small-image {
+  aspect-ratio: 0.96;
+  object-fit: contain;
+  width: 160px;
+  border-radius: 10px;
+  margin-top: 158px;
+  opacity: 0; /* Start as invisible */
+  transform: translateY(-100px); /* Start slightly above its final position */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Faster transition */
+}
+
+.small-image.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Slide to original position */
+}
+
+.decorative-image {
+  opacity: 0; /* Start as invisible */
+  transform: translateY(100px); /* Start slightly above its final position */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Faster transition */
+}
+
+.decorative-image.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Slide to original position */
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column; /* Stack images vertically */
+  }
+
+  .large-image-wrapper {
+    width: 100%; /* Take full width on small screens */
+  }
+
+  .small-image-wrapper {
+    width: 100%; /* Ensure small image takes full width as well */
+    margin-left: 0; /* Remove margin */
+    margin-top: 20px; /* Add some spacing between the large and small images */
+  }
+
+  .story-image,
+  .info-content,
+  .small-image,
+  .decorative-image {
+    margin-top: 40px;
+  }
+}

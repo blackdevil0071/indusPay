@@ -1,0 +1,135 @@
+/* Navbar container styling */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Navigation styling */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+/* Logo styling */
+.logo {
+  font: 700 24px Rubik, sans-serif;
+  letter-spacing: -0.13px;
+  color: #161c2d;
+  margin: 0;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  font: 700 15px/26px Gilroy, sans-serif;
+  letter-spacing: -0.1px;
+  color: #161c2d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #473bf0;
+}
+
+/* Call to action button styling */
+.cta-button {
+  background-color: #473bf0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 27px;
+  font: 700 17px Gilroy, sans-serif;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #3c31d1;
+}
+
+/* Responsive adjustments */
+
+/* For devices less than 991px */
+@media (max-width: 991px) {
+  /* Stack the header elements */
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Stack navigation items */
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  /* Vertical navigation links */
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* CTA button full-width on smaller screens */
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* For devices less than 768px (tablets) */
+@media (max-width: 768px) {
+  /* Adjust logo size */
+  .logo {
+    font-size: 20px;
+  }
+
+  /* Adjust spacing between nav links */
+  .nav-links {
+    gap: 20px;
+  }
+
+  /* CTA button full-width */
+  .cta-button {
+    padding: 12px 20px;
+  }
+}
+
+/* For devices less than 576px (phones) */
+@media (max-width: 576px) {
+  /* Reduce padding for smaller screens */
+  .navbar-container {
+    padding: 10px;
+  }
+
+  /* Reduce logo font size further */
+  .logo {
+    font-size: 18px;
+  }
+
+  /* Align nav links centrally for smaller screens */
+  .nav-links {
+    align-items: center;
+  }
+
+  /* Adjust the CTA button styling */
+  .cta-button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}

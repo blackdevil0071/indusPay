@@ -1,0 +1,129 @@
+.testimonial {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-container {
+  align-self: center;
+  width: 100%;
+  max-width: 942px;
+}
+
+.testimonial-content {
+  display: flex;
+  gap: 20px;
+}
+
+.avatar-column {
+  width: 19%;
+}
+
+.avatar-image {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 164px;
+  border-radius: 50%;
+  max-width: 100%;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.testimonial-text-column {
+  width: 81%;
+  margin-left: 20px;
+}
+
+.testimonial-text-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: Gilroy, sans-serif;
+  color: rgba(22, 28, 45, 1);
+}
+
+.quote-image {
+  aspect-ratio: 6.49;
+  object-fit: contain;
+  object-position: center;
+  width: 123px;
+  max-width: 100%;
+}
+
+.testimonial-quote {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+  align-self: stretch;
+  margin: 37px 0 0;
+}
+
+.testimonial-author {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: -0.2px;
+  margin: 36px 0 0 91px;
+}
+
+.decorative-image {
+  aspect-ratio: 1000;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  margin-top: 122px;
+}
+
+@media (max-width: 991px) {
+  .testimonial-container {
+    max-width: 100%;
+  }
+
+  .testimonial-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .avatar-column,
+  .testimonial-text-column {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .avatar-image {
+    margin-top: 40px;
+  }
+
+  .testimonial-text-wrapper {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .testimonial-quote {
+    max-width: 100%;
+  }
+
+  .testimonial-author {
+    margin-left: 10px;
+  }
+
+  .decorative-image {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
