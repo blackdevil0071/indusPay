@@ -8,16 +8,17 @@
   letter-spacing: -0.2px;
 }
 
-.custom-table th, .custom-table td {
+.custom-table th,
+.custom-table td {
   border: 1px solid black;
   padding: 8px;
   text-align: left;
-  margin: 25px 41px 0 0;
 }
 
-h2{
+h2 {
   text-align: center;
 }
+
 .custom-table th {
   font-weight: bold;
   background-color: #f2f2f2;
@@ -29,4 +30,40 @@ h2{
 
 .custom-table button {
   margin-right: 5px;
+}
+
+/* Responsive Design */
+.table-responsive {
+  overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+@media (max-width: 768px) {
+  .custom-table {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .custom-table th, .custom-table td {
+    display: block; /* Stack elements vertically */
+    width: 100%; /* Full width for each cell */
+  }
+
+  .custom-table th {
+    position: absolute; /* Position header cells for better readability */
+    left: -9999px; /* Hide them off-screen */
+  }
+
+  .custom-table td {
+    position: relative;
+    padding-left: 50%; /* Create space for labels */
+  }
+
+  .custom-table td::before {
+    content: attr(data-label); /* Display the header as a label */
+    position: absolute;
+    left: 0;
+    width: 50%; /* Half width for the label */
+    padding-left: 10px; /* Space from the left */
+    font-weight: bold; /* Make labels bold */
+    text-align: left; /* Align text to the left */
+  }
 }
